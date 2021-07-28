@@ -13,3 +13,10 @@ exclude:
   - src
   - tailwind.config.js
   - netlify.toml
+  - vendor
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true

@@ -1,7 +1,6 @@
 {
-  "name": "jekyll-starter-tailwind",
+  "name": "status-vac",
   "version": "6.0.0",
-  "description": "A starter kit for using Tailwind with Jekyll",
   "main": "gulpfile.babel.js",
   "devDependencies": {
     "autoprefixer": "10.3.1",
@@ -29,14 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/taylorbryant/jekyll-starter-tailwind.git"
+    "url": "https://github.com/EthWorks/status-vac.git"
   },
-  "author": "Taylor Bryant",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/taylorbryant/jekyll-starter-tailwind/issues"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+  "author": "Ethworks"
 }

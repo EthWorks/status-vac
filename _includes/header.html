@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Tailwind Jekyll Starter Kit</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
-  </head>
 
+    <head>
+        {% if page.title %}
+        <title>{{ site.title }} - {{ page.title }}</title>
+        {% else %}
+        <title>{{ site.title }}</title>
+        {% endif %}
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Vac</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="{{ '/assets/img/favicon.png' | relative_url }}" type="image/png" />
+
+        <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
+    </head>
   <body>
 </html>
