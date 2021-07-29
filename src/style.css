@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav {
+  max-width: 680px;
+}
+
+.nav-mobile {
+  height: 73%;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    max-width: 480px;
+  }
+}

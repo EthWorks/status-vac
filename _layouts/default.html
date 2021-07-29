@@ -1,10 +1,41 @@
 ---
 ---
 
-{% include header.html %}
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+  <head>
+    {% if page.title %}
+    <title>{{ site.title }} - {{ page.title }}</title>
+    {% else %}
+    <title>{{ site.title }}</title>
+    {% endif %}
 
-<main class="bg-indigo-500 flex h-screen items-center justify-center w-full">
-  {{ content }}
-</main>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Vac</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-{% include footer.html %}
+    <link
+      rel="shortcut icon"
+      href="{{ '/assets/img/favicon.png' | relative_url }}"
+      type="image/png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container max-w-screen-xl mx-auto px-5 md:px-12 lg:pt-6">
+      {% include header.html %}
+
+      <main class="bg-white text-black flex flex-col">{{ content }}</main>
+    </div>
+    {% include footer.html %}
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
+</html>
