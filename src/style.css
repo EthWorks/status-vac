@@ -7,6 +7,12 @@ h1 {
   line-height: 44px;
 }
 
+h2 {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
 .link--external {
   font-style: italic;
   font-weight: 600;
@@ -51,6 +57,38 @@ h1 {
   height: 73%;
 }
 
+.section__text {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 170%;
+}
+
+.work__heading {
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 700;
+}
+
+.work__text {
+  font-size: 14px;
+  line-height: 180%;
+  opacity: 0.75;
+  text-align: start;
+  max-width: 370px;
+}
+
+@media (max-width: 1023px) {
+  .work__heading {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .work__text {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 767px) {
   h1 {
     font-size: 24px;
@@ -59,5 +97,9 @@ h1 {
 
   .nav {
     max-width: 480px;
+  }
+
+  .section__text {
+    font-size: 12px;
   }
 }
