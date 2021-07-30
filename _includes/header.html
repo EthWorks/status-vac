@@ -1,5 +1,5 @@
 <header>
-  <div class="container max-w-screen-xl border-b">
+  <div class="container max-w-screen-xl sm:border-b">
     <div
       class="
         nav-section
@@ -16,104 +16,105 @@
           ><img src="{{ '/assets/img/logo.png' | relative_url }}"
         /></a>
       </div>
+      <div class="flex justify-between items-center w-9/12">
+        <div class="burger block sm:hidden z-50">
+          <button
+            class="
+              burger__button burger__button--open
+              fixed
+              top-2
+              right-5
+              w-12
+              h-12
+            "
+            type="button"
+            aria-label="Mobile menu button"
+          >
+            <img
+              class="burger__icon"
+              src="{{ '/assets/img/burger.svg' | relative_url }}"
+              alt="Open menu button"
+            />
+          </button>
+          <button
+            class="
+              burger__button burger__button--close
+              hidden
+              fixed
+              top-2
+              right-5
+              w-12
+              h-12
+            "
+            type="button"
+            aria-label="Close mobile menu button"
+          >
+            <img
+              class="burger__icon burger__icon--close"
+              src="{{ '/assets/img/close.svg' | relative_url }}"
+              alt="Close menu button"
+            />
+          </button>
+        </div>
 
-      <div class="burger block sm:hidden z-50">
-        <button
-          class="
-            burger__button burger__button--open
-            fixed
-            top-2
-            right-5
-            w-12
-            h-12
-          "
-          type="button"
-          aria-label="Mobile menu button"
-        >
-          <img
-            class="burger__icon"
-            src="{{ '/assets/img/burger.svg' | relative_url }}"
-            alt="Open menu button"
-          />
-        </button>
-        <button
-          class="
-            burger__button burger__button--close
-            hidden
-            fixed
-            top-2
-            right-5
-            w-12
-            h-12
-          "
-          type="button"
-          aria-label="Close mobile menu button"
-        >
-          <img
-            class="burger__icon burger__icon--close"
-            src="{{ '/assets/img/close.svg' | relative_url }}"
-            alt="Close menu button"
-          />
-        </button>
-      </div>
+        <nav class="nav container">
+          <ul
+            class="
+              nav__list
+              hidden
+              sm:flex
+              justify-between
+              container
+              text-xs
+              font-semibold
+              md:pr-8
+              l:p-0
+            "
+          >
+            <li class="hover:opacity-50">
+              <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/#work"
+                >Work</a
+              >
+            </li>
+            <li class="hover:opacity-50">
+              <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/#about"
+                >About</a
+              >
+            </li>
+            <li class="hover:opacity-50">
+              <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/#join"
+                >Join VAC</a
+              >
+            </li>
+            <li class="hover:opacity-50">
+              <a
+                class="nav__link"
+                href="{{site.url}}{{ site.baseurl }}/research-log/"
+                >Research log</a
+              >
+            </li>
+            <li class="hover:opacity-50">
+              <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/media"
+                >Media</a
+              >
+            </li>
+            <li class="hover:opacity-50">
+              <a class="nav__link" href="https://specs.vac.dev" target="_blank"
+                >Specs</a
+              >
+            </li>
+            <li class="hover:opacity-50">
+              <a class="nav__link" href="https://forum.vac.dev/" target="_blank"
+                >Forum</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-      <nav class="nav container">
-        <ul
-          class="
-            nav__list
-            hidden
-            sm:flex
-            justify-between
-            container
-            text-xs
-            font-semibold
-            md:pr-8
-            l:p-0
-          "
-        >
-          <li class="hover:opacity-50">
-            <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/#work"
-              >Work</a
-            >
-          </li>
-          <li class="hover:opacity-50">
-            <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/#about"
-              >About</a
-            >
-          </li>
-          <li class="hover:opacity-50">
-            <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/#join"
-              >Join VAC</a
-            >
-          </li>
-          <li class="hover:opacity-50">
-            <a
-              class="nav__link"
-              href="{{site.url}}{{ site.baseurl }}/research-log/"
-              >Research log</a
-            >
-          </li>
-          <li class="hover:opacity-50">
-            <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/media"
-              >Media</a
-            >
-          </li>
-          <li class="hover:opacity-50">
-            <a class="nav__link" href="https://specs.vac.dev" target="_blank"
-              >Specs</a
-            >
-          </li>
-          <li class="hover:opacity-50">
-            <a class="nav__link" href="https://forum.vac.dev/" target="_blank"
-              >Forum</a
-            >
-          </li>
+        <ul class="social items-center hidden md:flex">
+          {% include social.html %}
         </ul>
-      </nav>
-
-      <ul class="social items-center hidden md:flex">
-        {% include social.html %}
-      </ul>
+      </div>
 
       <div
         class="
