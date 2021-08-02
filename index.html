@@ -467,3 +467,42 @@ layout: default
     </div>
   </div>
 </section>
+
+<section
+  id="research-log"
+  class="log container max-w-screen-xl flex flex-col sm:flex-row py-10 border-b"
+>
+  <div class="heading-block w-full sm:w-2/12 lg:w-3/12">
+    <h2 class="text-sm font-semibold mb-5 s:text-center lg:text-center">
+      Research log
+    </h2>
+  </div>
+
+  <div class="info-block w-full sm:w-10/12 lg:w-9/12">
+    <div class="flex flex-col">
+      <ul class="mb-5 container s:mx-auto flex flex-col flex-wrap sm:flex-row">
+        {% for post in site.posts limit:8 %}
+        <li
+          class="flex flex-col w-full sm:w-1/2 lm:max-w-screen-xs mb-5 lg:mb-8"
+        >
+          <time class="text-xxs opacity-75"
+            >{{ post.date | date: '%B %d, %Y' }}</time
+          ><a
+            href="{{ site.baseurl }}{{ post.url }}"
+            class="text-xs lg:text-base font-semibold"
+            >{{ post.title }}</a
+          >
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="log__link container flex justify-start">
+        <a
+          class="link link--external"
+          href="{{site.url}}{{ site.baseurl }}/research-log/"
+          >View all posts</a
+        >
+      </div>
+    </div>
+  </div>
+</section>

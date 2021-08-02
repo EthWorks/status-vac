@@ -35,6 +35,7 @@ module.exports = {
       sans: ["Open Sans", "sans-serif"],
     },
     fontSize: {
+      xxs: ["10px", "22px"],
       xs: ["12px", "16px"],
       s: ["12px", "20px"],
       sm: ["14px", "22px"],
