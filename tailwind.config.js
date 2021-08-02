@@ -1,11 +1,18 @@
 module.exports = {
-  purge: [`_site/**/*.html`],
+  purge: [`_site/**/*.html`, `_site/**/*.css`],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: (theme) => ({
+        arrow: "url(/assets/img/arrow.svg)",
+      }),
+    },
     screens: {
+      xxs: "370px",
       xs: "450px",
+      xm: "480px",
       sm: "570px",
       s: { max: "570px" },
+      sl: "680px",
       "md-max": { max: "768px" },
       md: "768px",
       "lg-max": { max: "1024px" },
@@ -24,12 +31,19 @@ module.exports = {
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],
     },
+    fontSize: {
+      xs: ["12px", "16px"],
+      s: ["12px", "20px"],
+      sm: ["14px", "22px"],
+      base: ["14px", "24px"],
+      l: ["18px", "25px"],
+      lg: ["20px", "28px"],
+      xl: ["24px", "32px"],
+      xxl: ["32px", "44px"],
+    },
     colors: {
       white: "#fff",
       black: "#151512",
-      grey: {
-        test: "#242424",
-      },
     },
   },
   variants: {},
