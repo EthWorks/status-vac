@@ -9,6 +9,7 @@ module.exports = {
     },
     screens: {
       xxs: "370px",
+      xscard: "436px",
       xs: "450px",
       xm: "480px",
       sm: "570px",
@@ -19,6 +20,7 @@ module.exports = {
       "lg-max": { max: "1024px" },
       lg: "1024px",
       l: "1199px",
+      lm: "1280px",
       xl: "1440px",
     },
     maxHeight: {
