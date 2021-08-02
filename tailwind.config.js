@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         arrow: "url(/assets/img/arrow.svg)",
+        arrowWhite: "url(/assets/img/arrow-white.svg)",
       }),
     },
     screens: {
@@ -41,9 +42,15 @@ module.exports = {
       xl: ["24px", "32px"],
       xxl: ["32px", "44px"],
     },
+    textColor: {
+      white: "#fff",
+      black: "#151512",
+      peach: "#D1A69D",
+    },
     colors: {
       white: "#fff",
       black: "#151512",
+      peach: "#D1A69D",
     },
   },
   variants: {},
