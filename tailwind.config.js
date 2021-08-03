@@ -13,11 +13,9 @@ module.exports = {
       xs: "450px",
       xm: "480px",
       sm: "570px",
-      s: { max: "570px" },
       sl: "680px",
-      "md-max": { max: "768px" },
       md: "768px",
-      "lg-max": { max: "1024px" },
+      ml: "900px",
       lg: "1024px",
       l: "1199px",
       lm: "1280px",
@@ -31,6 +29,7 @@ module.exports = {
       nav: "350px",
       full: "100%",
     },
+
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],
     },
