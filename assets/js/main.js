@@ -6,6 +6,8 @@ const burgerClose = document.querySelector(".burger__button--close");
 const menuMobile = document.querySelector(".nav-mobile");
 const menuLinks = document.querySelectorAll(".nav__link");
 const overlay = document.querySelector(".overlay");
+const form = document.querySelector(".footer__form");
+const confirmation = document.querySelector(".footer__confirm");
 
 const closeMobileMenu = () => {
   burgerOpen.classList.toggle("hidden");
@@ -28,4 +30,10 @@ menuLinks.forEach(function (link) {
       behavior: "smooth",
     });
   });
+});
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  form.classList.toggle("hidden");
+  confirmation.classList.toggle("hidden");
 });
