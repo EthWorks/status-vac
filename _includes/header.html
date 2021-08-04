@@ -71,51 +71,19 @@
               l:p-0
             "
           >
+            {% for nav in site.data.navigation %}
             <li class="hover:opacity-50">
-              <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/#work"
-                >Work</a
-              >
-            </li>
-            <li class="hover:opacity-50">
-              <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/#about"
-                >About</a
-              >
-            </li>
-            <li class="hover:opacity-50">
-              <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/#join"
-                >Join VAC</a
-              >
-            </li>
-            <li class="hover:opacity-50">
+              {% if nav.path %}
               <a
-                class="nav__link-internal"
-                href="{{site.url}}{{ site.baseurl }}/research-log"
-                >Research log</a
+                class="nav__link"
+                href="{{site.url}}{{ site.baseurl }}/{{ nav.path }}"
+                >{{ nav.title }}</a
               >
+              {% endif %} {% if nav.link %}
+              <a href="{{ nav.link }}" target="_blank">{{ nav.title }}</a>
+              {% endif %}
             </li>
-            <li class="hover:opacity-50">
-              <a
-                class="nav__link-internal"
-                href="{{site.url}}{{ site.baseurl }}/media"
-                >Media</a
-              >
-            </li>
-            <li class="hover:opacity-50">
-              <a
-                class="nav__link-external"
-                href="https://specs.vac.dev"
-                target="_blank"
-                >Specs</a
-              >
-            </li>
-            <li class="hover:opacity-50">
-              <a
-                class="nav__link-external"
-                href="https://forum.vac.dev/"
-                target="_blank"
-                >Forum</a
-              >
-            </li>
+            {% endfor %}
           </ul>
         </nav>
 
@@ -174,51 +142,19 @@
               font-normal
             "
           >
+            {% for nav in site.data.navigation %}
             <li class="leading-loose hover:opacity-50">
-              <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/#work"
-                >Work</a
-              >
-            </li>
-            <li class="leading-loose hover:opacity-50">
-              <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/#about"
-                >About</a
-              >
-            </li>
-            <li class="leading-loose hover:opacity-50">
-              <a class="nav__link" href="{{site.url}}{{ site.baseurl }}/#join"
-                >Join VAC</a
-              >
-            </li>
-            <li class="leading-loose hover:opacity-50">
+              {% if nav.path %}
               <a
-                class="nav__link-internal"
-                href="{{site.url}}{{ site.baseurl }}/research-log/"
-                >Research log</a
+                class="nav__link"
+                href="{{site.url}}{{ site.baseurl }}/{{ nav.path }}"
+                >{{ nav.title }}</a
               >
+              {% endif %} {% if nav.link %}
+              <a href="{{ nav.link }}" target="_blank">{{ nav.title }}</a>
+              {% endif %}
             </li>
-            <li class="leading-loose hover:opacity-50">
-              <a
-                class="nav__link-internal"
-                href="{{site.url}}{{ site.baseurl }}/media"
-                >Media</a
-              >
-            </li>
-            <li class="leading-loose hover:opacity-50">
-              <a
-                class="nav__link-external"
-                href="https://specs.vac.dev"
-                target="_blank"
-                >Specs</a
-              >
-            </li>
-            <li class="leading-loose hover:opacity-50">
-              <a
-                class="nav__link-external"
-                href="https://forum.vac.dev/"
-                target="_blank"
-                >Forum</a
-              >
-            </li>
+            {% endfor %}
           </ul>
           <ul class="social items-center flex mt-8">
             {% include social.html %}

@@ -1,0 +1,28 @@
+---
+- title: "Work"
+  link:
+  path: "#work"
+
+- title: "About"
+  link:
+  path: "#about"
+
+- title: "Join VAC"
+  link:
+  path: "#join"
+
+- title: "Research log"
+  link:
+  path: "#research-log"
+
+- title: "Media"
+  link:
+  path: "#media"
+
+- title: "Specs"
+  link: "https://specs.vac.dev"
+  path:
+
+- title: "Forum"
+  link: "https://forum.vac.dev/"
+  path:
