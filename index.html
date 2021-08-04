@@ -480,20 +480,13 @@ layout: default
 
   <div class="info-block w-full sm:w-10/12 lg:w-9/12">
     <div class="flex flex-col">
-      <ul class="mb-5 container s:mx-auto flex flex-col flex-wrap sm:flex-row">
-        {% for post in site.posts limit:8 %}
-        <li
-          class="flex flex-col w-full sm:w-1/2 lm:max-w-screen-xs mb-5 lg:mb-8"
-        >
-          <time class="text-xxs opacity-75"
-            >{{ post.date | date: '%B %d, %Y' }}</time
-          ><a
-            href="{{ site.baseurl }}{{ post.url }}"
-            class="text-xs lg:text-base font-semibold"
-            >{{ post.title }}</a
-          >
-        </li>
-        {% endfor %}
+      <ul class="mb-5 container s:mx-auto flex-row hidden flex-wrap sm:flex">
+        {% for post in site.posts limit:8 %} {% include post-preview.html %} {%
+        endfor %}
+      </ul>
+      <ul class="mb-5 container s:mx-auto flex flex-col sm:hidden">
+        {% for post in site.posts limit:4 %} {% include post-preview.html %} {%
+        endfor %}
       </ul>
 
       <div class="log__link container flex justify-start">
@@ -527,20 +520,13 @@ layout: default
 
   <div class="info-block w-full sm:w-10/12 lg:w-9/12">
     <div class="flex flex-col">
-      <ul class="mb-5 container s:mx-auto flex flex-col flex-wrap sm:flex-row">
-        {% for mediapost in site.data.media limit:8 %}
-        <li
-          class="flex flex-col w-full sm:w-1/2 lm:max-w-screen-xs mb-5 lg:mb-8"
-        >
-          <time class="text-xxs opacity-75"
-            >{{ mediapost.date | date: '%B %d, %Y' }}</time
-          ><a
-            href="{{ mediapost.link }}"
-            class="text-xs lg:text-base font-semibold"
-            >{{ mediapost.title }}</a
-          >
-        </li>
-        {% endfor %}
+      <ul class="mb-5 container s:mx-auto flex-row hidden flex-wrap sm:flex">
+        {% for mediapost in site.data.media limit:8 %} {% include
+        media-preview.html %} {% endfor %}
+      </ul>
+      <ul class="mb-5 container s:mx-auto flex flex-col sm:hidden">
+        {% for mediapost in site.data.media limit:4 %} {% include
+        media-preview.html %} {% endfor %}
       </ul>
 
       <div class="media__link container flex justify-start">
