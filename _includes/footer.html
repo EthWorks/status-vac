@@ -1,10 +1,23 @@
 <footer class="footer bg-black flex justify-center">
   <div
-    class="container max-w-screen-xl flex p-5 pb-10 md:px-12 md:pt-5 lg:pt-10"
+    class="
+      container
+      max-w-screen-xl
+      flex
+      sl:justify-between
+      lm:justify-start
+      p-5
+      pb-10
+      md:px-12 md:pt-5
+      lg:pt-10
+    "
   >
-    <div class="logo mr-10 sm:mr-20">
+    <div class="logo mr-10 lg:mr-20">
       <a href="{{site.url}}{{ site.baseurl }}"
-        ><img src="{{ '/assets/img/logo.png' | relative_url }}"
+        ><img
+          src="{{ '/assets/img/logo.png' | relative_url }}"
+          alt="Vac logo"
+          class="w-9 h-11"
       /></a>
     </div>
     <p
@@ -14,16 +27,13 @@
         w-52
         text-base text-white
         opacity-75
-        mr-20
-        lg:mr-32
+        lm:mr-32
       "
     >
       VAC researches peer-to-peer, private, censorship resistant communication
     </p>
 
-    <div
-      class="flex flex-col xm:flex-row xm:justify-between flex-1 md:flex-none"
-    >
+    <div class="flex flex-col sm:flex-row xm:justify-between">
       <nav class="flex max-w-xs mr-0 xm:mr-5 l:mr-32 mb-5 sm:mb-0">
         <div class="flex flex-col xxs:flex-row">
           <div class="flex flex-col mr-5 sl:mr-14">
@@ -75,7 +85,7 @@
         </div>
       </nav>
 
-      <div class="flex flex-col flex-1 xxs:flex-none xm:flex-1 sm:flex-none">
+      <div class="flex flex-col w-52">
         <h3 class="text-base text-white mb-5">Signup for updates</h3>
         <form action="">
           <div class="flex items-center w-full">
