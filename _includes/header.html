@@ -76,7 +76,9 @@
               {% if nav.path %}
               <a class="nav__link" href="{{ nav.path }}">{{ nav.title }}</a>
               {% endif %} {% if nav.link %}
-              <a href="{{ nav.link }}" target="_blank">{{ nav.title }}</a>
+              <a href="{{ nav.link }}" target="_blank" rel="noopener noreferrer"
+                >{{ nav.title }}</a
+              >
               {% endif %}
             </li>
             {% endfor %}
@@ -143,7 +145,9 @@
               {% if nav.path %}
               <a class="nav__link" href="{{ nav.path }}">{{ nav.title }}</a>
               {% endif %} {% if nav.link %}
-              <a href="{{ nav.link }}" target="_blank">{{ nav.title }}</a>
+              <a href="{{ nav.link }}" target="_blank" rel="noopener noreferrer"
+                >{{ nav.title }}</a
+              >
               {% endif %}
             </li>
             {% endfor %}
