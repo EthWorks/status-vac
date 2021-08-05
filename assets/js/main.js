@@ -16,22 +16,10 @@ const closeMobileMenu = () => {
   overlay.classList.toggle("hidden");
 };
 
-burger.addEventListener("click", function (e) {
-  closeMobileMenu();
-});
-
-overlay.addEventListener("click", function (e) {
-  closeMobileMenu();
-});
-
+burger.addEventListener("click", closeMobileMenu);
+overlay.addEventListener("click", closeMobileMenu);
 menuLinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    const id = e.target.getAttribute("href");
-    document.querySelector(id).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-  closeMobileMenu();
+  link.addEventListener("click", closeMobileMenu);
 });
 
 form.addEventListener("submit", function (e) {
