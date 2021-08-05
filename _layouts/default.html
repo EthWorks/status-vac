@@ -10,9 +10,6 @@
 
       <main class="bg-white text-black flex flex-col">{{ content }}</main>
     </div>
-    {% include footer.html %}
-
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/smooth-scroll.js' | relative_url }}"></script>
+    {% include footer.html %} {% include scripts.html %}
   </body>
 </html>
