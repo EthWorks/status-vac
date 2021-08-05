@@ -74,11 +74,7 @@
             {% for nav in site.data.navigation %}
             <li class="hover:opacity-50">
               {% if nav.path %}
-              <a
-                class="nav__link"
-                href="{{site.url}}{{ site.baseurl }}/{{ nav.path }}"
-                >{{ nav.title }}</a
-              >
+              <a class="nav__link" href="{{ nav.path }}">{{ nav.title }}</a>
               {% endif %} {% if nav.link %}
               <a href="{{ nav.link }}" target="_blank">{{ nav.title }}</a>
               {% endif %}
@@ -145,11 +141,7 @@
             {% for nav in site.data.navigation %}
             <li class="leading-loose hover:opacity-50">
               {% if nav.path %}
-              <a
-                class="nav__link"
-                href="{{site.url}}{{ site.baseurl }}/{{ nav.path }}"
-                >{{ nav.title }}</a
-              >
+              <a class="nav__link" href="{{ nav.path }}">{{ nav.title }}</a>
               {% endif %} {% if nav.link %}
               <a href="{{ nav.link }}" target="_blank">{{ nav.title }}</a>
               {% endif %}

@@ -17,19 +17,21 @@ const closeMobileMenu = () => {
 };
 
 burger.addEventListener("click", function (e) {
-  e.preventDefault();
+  closeMobileMenu();
+});
+
+overlay.addEventListener("click", function (e) {
   closeMobileMenu();
 });
 
 menuLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
-    closeMobileMenu();
-    const id = e.target.getAttribute("href").slice(1);
-    console.log(document.querySelector(id));
+    const id = e.target.getAttribute("href");
     document.querySelector(id).scrollIntoView({
       behavior: "smooth",
     });
   });
+  closeMobileMenu();
 });
 
 form.addEventListener("submit", function (e) {
