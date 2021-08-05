@@ -71,17 +71,8 @@
               l:p-0
             "
           >
-            {% for nav in site.data.navigation %}
-            <li class="hover:opacity-50">
-              {% if nav.path %}
-              <a class="nav__link" href="{{ nav.path }}">{{ nav.title }}</a>
-              {% endif %} {% if nav.link %}
-              <a href="{{ nav.link }}" target="_blank" rel="noopener noreferrer"
-                >{{ nav.title }}</a
-              >
-              {% endif %}
-            </li>
-            {% endfor %}
+            {% for nav in site.data.navigation %} {% include nav-item.html %} {%
+            endfor %}
           </ul>
         </nav>
 
@@ -140,17 +131,8 @@
               font-normal
             "
           >
-            {% for nav in site.data.navigation %}
-            <li class="leading-loose hover:opacity-50">
-              {% if nav.path %}
-              <a class="nav__link" href="{{ nav.path }}">{{ nav.title }}</a>
-              {% endif %} {% if nav.link %}
-              <a href="{{ nav.link }}" target="_blank" rel="noopener noreferrer"
-                >{{ nav.title }}</a
-              >
-              {% endif %}
-            </li>
-            {% endfor %}
+            {% for nav in site.data.navigation %} {% include nav-item.html %} {%
+            endfor %}
           </ul>
           <ul class="social items-center flex mt-8">
             {% include social.html %}
