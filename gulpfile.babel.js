@@ -5,11 +5,14 @@ import cssnano from "cssnano";
 import { dest, series, src, task, watch } from "gulp";
 import postcss from "gulp-postcss";
 import atimport from "postcss-import";
+import imagemin from "gulp-imagemin";
 import tailwindcss from "tailwindcss";
 
 const SITE_ROOT = "./_site";
 const POST_BUILD_STYLESHEET = `${SITE_ROOT}/assets/css/`;
 const PRE_BUILD_STYLESHEET = "./assets/css/style.css";
+const IMAGES = "./assets/img";
+const IMAGES_MINIMIZED = `${SITE_ROOT}/assets/`;
 const TAILWIND_CONFIG = "./tailwind.config.js";
 
 // Fix for Windows compatibility
@@ -43,6 +46,19 @@ task("processStyles", () => {
     .pipe(dest(POST_BUILD_STYLESHEET));
 });
 
+task("images", () => {
+  return src(IMAGES)
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.svgo(),
+      ])
+    )
+
+    .pipe(dest(IMAGES_MINIMIZED));
+});
+
 task("startServer", () => {
   browserSync.init({
     files: [SITE_ROOT + "/**"],
@@ -71,7 +87,7 @@ task("startServer", () => {
   );
 });
 
-const buildSite = series("buildJekyll", "processStyles");
+const buildSite = series("buildJekyll", "processStyles", "images");
 
 exports.serve = series(buildSite, "startServer");
 exports.default = series(buildSite);
