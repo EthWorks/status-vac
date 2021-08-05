@@ -6,7 +6,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.link--external {
+.link--external,
+.link--back {
   @apply relative italic font-semibold text-xs pl-3 transition-all duration-300;
 }
 
@@ -23,7 +24,21 @@ html {
   background-size: cover;
 }
 
-.link--external::after {
+.link--back::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(180deg);
+  width: 6px;
+  height: 8px;
+  background-image: url(/assets/img/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.link--external::after,
+.link--back::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -32,7 +47,8 @@ html {
   height: 1px;
 }
 
-.link--external:hover::after {
+.link--external:hover::after,
+.link--back:hover::after {
   background-color: #151512;
 }
 
