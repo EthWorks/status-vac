@@ -61,7 +61,8 @@ layout: default
 
   <div class="info-block w-full sm:w-10/12 lg:w-9/12">
     <ul class="container s:mx-auto flex-row hidden flex-wrap lg:flex">
-      {% for post in site.posts %} {% include post-preview.html %} {% endfor %}
+      {% for post in site.posts %} {% if post.category == "research" %} {%
+      include post-preview.html %} {% endif %} {% endfor %}
     </ul>
     <ul
       class="
@@ -72,8 +73,8 @@ layout: default
         lg:hidden
       "
     >
-      {% for post in site.posts limit:8 %} {% include post-preview.html %} {%
-      endfor %}
+      {% for post in site.posts limit:8 %} {% if post.category == "research" %}
+      {% include post-preview.html %} {% endif %} {% endfor %}
     </ul>
   </div>
 </section>
@@ -89,8 +90,8 @@ layout: default
 
   <div class="info-block w-full sm:w-10/12 lg:w-9/12">
     <ul class="container s:mx-auto flex flex-col flex-wrap sm:flex-row">
-      {% for post in site.posts limit:4%} {% include post-preview.html %} {%
-      endfor %}
+      {% for post in site.posts %} {% if post.category == "problem" %} {%
+      include post-preview.html %} {% endif %} {% endfor %}
     </ul>
   </div>
 </section>
