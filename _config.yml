@@ -1,6 +1,7 @@
 title: Vac
 description: VAC researches peer-to-peer, private, censorship resistant communication.
 baseurl: ""
+url: "http://localhost:4000/"
 # url: "https://vac.dev"
 
 exclude:
@@ -17,8 +18,17 @@ exclude:
   - netlify.toml
   - vendor
 
+collections:
+  authors:
+    output: true
+
 defaults:
   - scope:
       path: "assets/img"
     values:
       image: true
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
