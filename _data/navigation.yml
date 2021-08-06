@@ -1,28 +1,28 @@
 ---
 - title: "Work"
-  link:
-  path: "#work"
+  link: "#work"
+  type: local
 
 - title: "About"
-  link:
-  path: "#about"
+  link: "#about"
+  type: local
 
 - title: "Join VAC"
-  link:
-  path: "#join"
+  link: "#join"
+  type: local
 
 - title: "Research log"
-  link:
-  path: "#research-log"
+  link: "research-log"
+  type: local
 
 - title: "Media"
-  link:
-  path: "#media"
+  link: "media"
+  type: local
 
 - title: "Specs"
   link: "https://specs.vac.dev"
-  path:
+  type: external
 
 - title: "Forum"
   link: "https://forum.vac.dev/"
-  path:
+  type: external
