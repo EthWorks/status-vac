@@ -55,26 +55,14 @@ layout: default
 >
   <div class="heading-block w-full sm:w-2/12 lg:w-3/12 pr-2 ml:pr-0">
     <h2 class="text-sm font-semibold mb-5 text-center sm:text-left">
-      Research entries
+      Open problems
     </h2>
   </div>
 
   <div class="info-block w-full sm:w-10/12 lg:w-9/12">
-    <ul class="container s:mx-auto flex-row hidden flex-wrap lg:flex">
-      {% for post in site.posts %} {% if post.category == "research" %} {%
+    <ul class="container s:mx-auto flex flex-col flex-wrap sm:flex-row">
+      {% for post in site.posts %} {% if post.category == "problem" %} {%
       include post-preview.html %} {% endif %} {% endfor %}
-    </ul>
-    <ul
-      class="
-        container
-        s:mx-auto
-        flex flex-col
-        sm:flex-row sm:flex-wrap
-        lg:hidden
-      "
-    >
-      {% for post in site.posts limit:8 %} {% if post.category == "research" %}
-      {% include post-preview.html %} {% endif %} {% endfor %}
     </ul>
   </div>
 </section>
@@ -84,13 +72,13 @@ layout: default
 >
   <div class="heading-block w-full sm:w-2/12 lg:w-3/12 pr-2 ml:pr-0">
     <h2 class="text-sm font-semibold mb-5 text-center sm:text-left">
-      Open problems
+      Research entries
     </h2>
   </div>
 
   <div class="info-block w-full sm:w-10/12 lg:w-9/12">
     <ul class="container s:mx-auto flex flex-col flex-wrap sm:flex-row">
-      {% for post in site.posts %} {% if post.category == "problem" %} {%
+      {% for post in site.posts %} {% if post.category == "research" %} {%
       include post-preview.html %} {% endif %} {% endfor %}
     </ul>
   </div>
