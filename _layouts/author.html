@@ -27,11 +27,7 @@ layout: default
       sm:pb-0
     "
   >
-    <a
-      class="link link--back"
-      href="{{site.url}}{{ site.baseurl }}/research-log/"
-      >Back</a
-    >
+    <a class="link link--back" href="{{ site.baseurl }}research-log/">Back</a>
   </div>
   <div class="info-block w-full sm:w-10/12 lg:w-9/12">
     <div class="post mb-10">
@@ -78,11 +74,12 @@ layout: default
           </svg>
         </a>
       </div>
-
-      <div class="container s:mx-auto flex-row hidden flex-wrap sm:flex">
-        {% assign filtered_posts = site.posts | where: 'author', page.short_name
-        %} {% for post in filtered_posts %} {% include post-preview.html %} {%
-        endfor %}
+      <div>
+        <ul class="container s:mx-auto flex flex-row flex-wrap">
+          {% assign filtered_posts = site.posts | where: 'author',
+          page.short_name %} {% for post in filtered_posts %} {% include
+          post-preview.html %} {% endfor %}
+        </ul>
       </div>
     </div>
     <div class="post__content">{{ content }}</div>
