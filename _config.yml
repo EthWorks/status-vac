@@ -1,7 +1,6 @@
 title: Vac
 description: VAC researches peer-to-peer, private, censorship resistant communication.
 baseurl: ""
-url: "http://localhost:4000/"
 # url: "https://vac.dev"
 
 exclude:
