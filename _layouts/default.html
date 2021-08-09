@@ -2,10 +2,12 @@
 ---
 
 <!DOCTYPE html>
-<html class="no-js" lang="en-US">
+<html class="h-full" lang="en-US">
   {% include head.html %}
-  <body>
-    <div class="container max-w-screen-xl mx-auto px-5 md:px-12 lg:pt-6">
+  <body class="h-full flex flex-col">
+    <div
+      class="flex-grow container max-w-screen-xl mx-auto px-5 md:px-12 lg:pt-6"
+    >
       {% include header.html %}
 
       <main class="bg-white text-black flex flex-col">{{ content }}</main>
