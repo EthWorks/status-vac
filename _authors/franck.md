@@ -1,4 +1,5 @@
 ---
+layout: author
 short_name: franck
 name: Franck Royer
 twitter: dantounet
