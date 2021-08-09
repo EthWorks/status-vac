@@ -50,16 +50,12 @@ layout: default
       <div
         class="media__card flex flex-col w-full sl:max-w-48 mb-5 sm:mb-0 group"
       >
-      <a href="{{ mediapost.link }}"
-            target="_blank" rel="noopener noreferrer"
-          >
-      
+      <a href="{{ mediapost.link }}" target="_blank" rel="noopener noreferrer">     
         <img
           src="{{ mediapost.image }}"
           class="w-full mb-2 group-hover:opacity-75"
           alt="Media preview image"
         />
-
         <li class="flex flex-col w-full mb-5 lg:mb-8">
           <time class="text-xxs opacity-75"
             >{{ mediapost.date | date: '%B %d, %Y' }}</time
