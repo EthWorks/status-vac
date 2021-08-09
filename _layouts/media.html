@@ -47,10 +47,12 @@ layout: default
       "
     >
       {% for mediapost in site.data.media %}
-      <div class="media__card flex flex-col w-full sl:max-w-48 mb-5 sm:mb-0">
+      <div
+        class="media__card flex flex-col w-full sl:max-w-48 mb-5 sm:mb-0 group"
+      >
         <img
           src="{{ mediapost.image }}"
-          class="w-full mb-2"
+          class="w-full mb-2 group-hover:opacity-30"
           alt="Media preview image"
         />
 
@@ -59,7 +61,7 @@ layout: default
             >{{ mediapost.date | date: '%B %d, %Y' }}</time
           ><a
             href="{{ mediapost.link }}"
-            class="text-xs lg:text-base font-semibold hover:underline"
+            class="text-xs lg:text-base font-semibold group-hover:underline"
             >{{ mediapost.title }}</a
           >
         </li>
