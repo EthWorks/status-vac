@@ -35,21 +35,19 @@ layout: default
       Media
     </h1>
     <div
-      class="media__cards container mx-auto flex flex-col flex-wrap sm:flex-row"
+      class="
+        media__cards
+        container
+        mx-auto
+        lg:mx-0
+        flex flex-col flex-wrap
+        sm:flex-row
+        lg:max-w-4xl
+        sl:justify-between
+      "
     >
       {% for mediapost in site.data.media %}
-      <div
-        class="
-          media__card
-          flex flex-col
-          w-full
-          sl:w-1/2
-          xl:max-w-screen-xscard
-          sl:mr-5
-          mb-5
-          sm:mb-0
-        "
-      >
+      <div class="media__card flex flex-col w-full sl:max-w-48 mb-5 sm:mb-0">
         <img
           src="{{ mediapost.image }}"
           class="w-full mb-2"
