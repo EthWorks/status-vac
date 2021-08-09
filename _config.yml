@@ -1,6 +1,7 @@
 title: Vac
 description: VAC researches peer-to-peer, private, censorship resistant communication.
 baseurl: ""
+url: "https://status-vac.netlify.app/"
 # url: "https://vac.dev"
 
 exclude:
