@@ -471,7 +471,11 @@ layout: default
             <p class="w-full text-s lg:text-base mb-3">{{ card.text }}</p>
           </div>
           <div class="media__link container flex justify-start">
-            <a class="link link--external" href="{{ card.link }}"
+            <a
+              class="link link--external"
+              href="{{ card.link }}"
+              target="_blank"
+              rel="noopener noreferrer"
               >{{ card.linkText }}</a
             >
           </div>
