@@ -1,11 +1,19 @@
 module.exports = {
+  mode: "jit",
   purge: [`_site/**/*.html`, `_site/**/*.css`],
   theme: {
     extend: {
       backgroundImage: (theme) => ({
         arrow: "url(/assets/img/arrow.svg)",
         arrowWhite: "url(/assets/img/arrow-white.svg)",
+        arrowPeach: "url(/assets/img/arrow-peach.svg)",
       }),
+      maxWidth: {
+        48: "48%",
+      },
+      maxHeight: {
+        nav: "350px",
+      },
     },
     screens: {
       xxs: "370px",
@@ -21,15 +29,6 @@ module.exports = {
       lm: "1280px",
       xl: "1440px",
     },
-    maxHeight: {
-      0: "0",
-      "1/4": "25%",
-      "1/2": "50%",
-      "3/4": "75%",
-      nav: "350px",
-      full: "100%",
-    },
-
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],
     },
