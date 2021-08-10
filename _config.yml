@@ -1,8 +1,7 @@
 title: Vac
 description: VAC researches peer-to-peer, private, censorship resistant communication.
-baseurl: ""
-url: "https://status-vac.netlify.app/"
-# url: "https://vac.dev"
+baseurl: ''
+url: 'https://vac.dev'
 
 exclude:
   - Gemfile
@@ -24,11 +23,11 @@ collections:
 
 defaults:
   - scope:
-      path: "assets/img"
+      path: 'assets/img'
     values:
       image: true
   - scope:
-      path: ""
-      type: "authors"
+      path: ''
+      type: 'authors'
     values:
-      layout: "author"
+      layout: 'author'
