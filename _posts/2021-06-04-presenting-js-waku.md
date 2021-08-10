@@ -1,15 +1,15 @@
 ---
 layout: post
-name: "Presenting JS-Waku: Waku v2 in the Browser"
-title: "Presenting JS-Waku: Waku v2 in the Browser"
+name: 'Presenting JS-Waku: Waku v2 in the Browser'
+title: 'Presenting JS-Waku: Waku v2 in the Browser'
 date: 2021-06-04 12:00:00 +0800
 author: franck
 published: true
 permalink: /presenting-js-waku
-categories: platform
-summary: "JS-Waku is bringing Waku v2 to the browser. Learn what we achieved so far and what is next in our pipeline!"
+category: research
+summary: 'JS-Waku is bringing Waku v2 to the browser. Learn what we achieved so far and what is next in our pipeline!'
 image: /assets/img/js-waku-gist.png
-discuss: https://forum.vac.dev/t/discussion-presenting-js-waku-waku-v2-in-the-browser/81 
+discuss: https://forum.vac.dev/t/discussion-presenting-js-waku-waku-v2-in-the-browser/81
 ---
 
 For the past 3 months, we have been working on bringing Waku v2 to the browser.
@@ -61,7 +61,7 @@ It showed how using js-libp2p with few modifications enabled access to the Waku 
 There was still some unresolved challenges.
 For example, nim-waku only support TCP connections which are not supported by browser applications.
 Hence, to connect to other node, the POC was connecting to a NodeJS proxy application using websockets,
-which in turn could connect to wakunode2 via TCP. 
+which in turn could connect to wakunode2 via TCP.
 
 However, to enable dApp and Wallet developers to easily integrate Waku in their product,
 we need to give them a library that is easy to use and works out of the box:
@@ -109,7 +109,7 @@ and fix small nim-waku & nim-libp2p bugs
 
 To fully access the waku network, JS-Waku needs to enable web apps to connect to nim-waku nodes.
 A standard way to do so is using secure websockets as it is not possible to connect directly to a TCP port from the browser.
-Unfortunately websocket support is not yet available in [nim-libp2p](https://github.com/status-im/nim-libp2p/issues/407) so 
+Unfortunately websocket support is not yet available in [nim-libp2p](https://github.com/status-im/nim-libp2p/issues/407) so
 we ended up deploying [websockify](https://github.com/novnc/websockify) alongside wakunode2 instances.
 
 As we built the [web chat app](https://github.com/status-im/js-waku/tree/main/examples/web-chat),
@@ -124,7 +124,10 @@ const waku = await Waku.create({});
 const nodes = await getStatusFleetNodes();
 await Promise.all(nodes.map((addr) => waku.dial(addr)));
 
-const msg = WakuMessage.fromUtf8String("Here is a message!", "/my-cool-app/1/my-use-case/proto")
+const msg = WakuMessage.fromUtf8String(
+  'Here is a message!',
+  '/my-cool-app/1/my-use-case/proto'
+);
 await waku.relay.send(msg);
 ```
 
