@@ -12,7 +12,7 @@
       lg:pt-10
     "
   >
-    <div class="logo mr-10 lg:mr-20">
+    <div class="logo mr-10 sm:mr-0 sm:w-2/12 lg:w-3/12 ml:ml-12">
       <a href="/"
         ><img
           src="{{ '/assets/img/logo.png' | relative_url }}"
@@ -23,7 +23,7 @@
     <p
       class="
         hidden
-        ml:inline-block
+        ml:inline-block ml:mr-10
         w-52
         text-base text-white
         opacity-75
@@ -33,10 +33,12 @@
       VAC researches peer-to-peer, private, censorship resistant communication
     </p>
 
-    <div class="flex flex-col sm:flex-row xm:justify-between">
+    <div
+      class="flex flex-col xm:flex-row xm:justify-between sm:w-10/12 lg:w-9/12"
+    >
       <nav class="flex max-w-xs mr-0 xm:mr-5 l:mr-32 mb-5 sm:mb-0">
-        <div class="flex flex-col xxs:flex-row">
-          <div class="flex flex-col mr-5 sl:mr-14">
+        <div class="flex">
+          <div class="flex flex-col mr-5 sm:mr-10 sl:mr-14">
             <p class="text-base text-white mb-5 lg:mb-4">Research</p>
             <ul>
               {% for nav in site.data.footer-research %} {% include
@@ -51,6 +53,7 @@
             </ul>
           </div>
         </div>
+        {%- comment -%}
         <div>
           <div class="flex flex-col sl:mr-5">
             <p class="text-base text-white mb-5 lg:mb-4">Projects</p>
@@ -60,6 +63,7 @@
             </ul>
           </div>
         </div>
+        {%- endcomment -%}
       </nav>
 
       <div class="flex flex-col w-52">
