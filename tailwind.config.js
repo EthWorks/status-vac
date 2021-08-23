@@ -3,16 +3,20 @@ module.exports = {
   purge: [`_site/**/*.html`, `_site/**/*.css`],
   theme: {
     extend: {
-      backgroundImage: (theme) => ({
+      backgroundImage: theme => ({
         arrow: 'url(/assets/img/arrow.svg)',
         arrowWhite: 'url(/assets/img/arrow-white.svg)',
         arrowPeach: 'url(/assets/img/arrow-peach.svg)',
       }),
       maxWidth: {
+        280: '280px',
+        436: '436px',
         48: '48%',
         80: '80%',
       },
       maxHeight: {
+        280: '280px',
+        436: '436px',
         nav: '350px',
       },
     },
