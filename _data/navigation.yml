@@ -15,10 +15,6 @@
   link: '/research-log'
   type: local
 
-- title: 'Media'
-  link: '/media'
-  type: local
-
 - title: 'Specs'
   link: 'https://specs.vac.dev'
   type: external
