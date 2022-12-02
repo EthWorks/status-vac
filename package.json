@@ -14,7 +14,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "9.0.0",
     "postcss": "8.3.6",
-    "postcss-import": "14.0.2",
+    "postcss-import": "15.0.1",
     "tailwindcss": "^2.2.7"
   },
   "engines": {
